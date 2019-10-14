@@ -24,14 +24,12 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
 private ProductViewModel productViewModel;
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
-        private final TextView productNameView, productDescriptionView, productCreationDateView, productQuantityView, productAvailableView;
+        private final TextView productNameView, productDescriptionView, productQuantityView;
         private final Button editButton, deleteButton;
         private ProductViewHolder(final View itemView) {
             super(itemView);
             productNameView = itemView.findViewById(R.id.textView_product_name);
             productDescriptionView = itemView.findViewById(R.id.textView_product_description);
-            productCreationDateView = itemView.findViewById(R.id.textView_creation_date);
-            productAvailableView = itemView.findViewById(R.id.textView_available);
             productQuantityView = itemView.findViewById(R.id.textView_quantity);
 
             editButton = itemView.findViewById(R.id.button_edit);
@@ -59,12 +57,7 @@ private ProductViewModel productViewModel;
             Product current = mProducts.get(position);
             holder.productNameView.setText("Name: "+current.getProductName());
             holder.productDescriptionView.setText("Description: "+current.getProductDescription());
-            holder.productCreationDateView.setText("Date Created: "+current.getDateTimeFormatted(holder.productCreationDateView.getContext()));
             holder.productQuantityView.setText("Quantity: "+current.getProductQuantity());
-            if(current.isActive())
-            holder.productAvailableView.setText("Available: Yes");
-            else
-                holder.productAvailableView.setText("Available: No");
 
         } else {
             // Covers the case of data not being ready yet.

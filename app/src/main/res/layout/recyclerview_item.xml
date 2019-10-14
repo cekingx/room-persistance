@@ -3,7 +3,7 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/holo_orange_dark"
+    android:background="@color/colorAccent"
     style="@style/product_item"
     >
 <LinearLayout
@@ -15,26 +15,20 @@
         android:id="@+id/textView_product_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#fff"
          />
     <TextView
         android:id="@+id/textView_product_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#fff"
          />
-    <TextView
-        android:id="@+id/textView_creation_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+
     <TextView
         android:id="@+id/textView_quantity"
         android:layout_width="match_parent"
+        android:textColor="#fff"
         android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/textView_available"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
 </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"

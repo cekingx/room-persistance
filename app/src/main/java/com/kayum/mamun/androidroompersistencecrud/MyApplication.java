@@ -3,6 +3,8 @@ package com.kayum.mamun.androidroompersistencecrud;
 import android.app.Application;
 import android.content.Context;
 
+import com.facebook.stetho.Stetho;
+
 public class MyApplication extends Application {
 
     private static Context sContext;
@@ -10,6 +12,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Stetho.initializeWithDefaults(this);
         sContext = getApplicationContext();
 
     }

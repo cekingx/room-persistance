@@ -27,6 +27,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+
     // Dependencies for working with Architecture components
     // You'll probably have to update the version numbers in guild.gradle (Project)
     implementation "android.arch.persistence.room:runtime:$rootProject.roomVersion"

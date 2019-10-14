@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                         deleteButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Toast.makeText(getApplicationContext(), "Delete button is called"+adapter.getProductAt(position).getProductName() , Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(getApplicationContext(), "Delete button is called"+adapter.getProductAt(position).getProductName() , Toast.LENGTH_SHORT).show();
 
                                 mProductViewModel.delete(adapter.getProductAt(position));
                             }
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                         editButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Toast.makeText(getApplicationContext(), "Edit button is called"+adapter.getProductAt(position).getProductName() , Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(getApplicationContext(), "Edit button is called"+adapter.getProductAt(position).getProductName() , Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(MainActivity.this, NewProductActivity.class);
                                 intent.putExtra(ApplicationStrings.EXTRA_REPLY_PRODUCT_ID, adapter.getProductAt(position).getProductId());
                                 intent.putExtra(ApplicationStrings.EXTRA_REPLY_PRODUCT_NAME, adapter.getProductAt(position).getProductName());
